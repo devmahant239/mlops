@@ -2,6 +2,7 @@ import logging
 import json 
 
 from kafka import KafkaConsumer
+from database import insert_transaction
 
 logging.basicConfig(level=logging.INFO)
 
@@ -30,7 +31,9 @@ def consumer_transaction():
         for message in consumer:
             transaction = message.value
             logging.info(f"received transaction:{transaction}")
-
+            insert_transaction(transaction)
+            logging.info("transaction inserted into PostgreSQL")
+    
     except Exception as error:
         logging.error(f"failed while consuming message:{error}")
 
