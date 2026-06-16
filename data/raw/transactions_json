@@ -1,0 +1,42 @@
+[
+    {
+        "transaction_id": "8029c857-df6d-4d84-8b1d-682ff11be9e6",
+        "amount": 76617,
+        "location": "banglore",
+        "transaction_type": "pos",
+        "transaction_time": "2026-06-10T14:32:46.177160",
+        "is_fraud": true
+    },
+    {
+        "transaction_id": "6de17ffd-00d8-4949-a302-1671d9906e37",
+        "amount": 5771,
+        "location": "mumbai",
+        "transaction_type": "pos",
+        "transaction_time": "2026-06-10T14:32:46.177334",
+        "is_fraud": true
+    },
+    {
+        "transaction_id": "2abc6d99-7bcc-43fa-b3f2-fd708e2643b3",
+        "amount": 54666,
+        "location": "mumbai",
+        "transaction_type": "bank_transfer",
+        "transaction_time": "2026-06-10T14:32:46.177435",
+        "is_fraud": false
+    },
+    {
+        "transaction_id": "92f2d4ff-1270-4aef-b6df-631eb452ca2b",
+        "amount": 7493,
+        "location": "banglore",
+        "transaction_type": "atm",
+        "transaction_time": "2026-06-10T14:32:46.177508",
+        "is_fraud": false
+    },
+    {
+        "transaction_id": "bf7b3f34-d012-4fd7-a4de-e6bde6b0859f",
+        "amount": 13011,
+        "location": "ahmedabad",
+        "transaction_type": "atm",
+        "transaction_time": "2026-06-10T14:32:46.177569",
+        "is_fraud": true
+    }
+]

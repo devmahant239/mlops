@@ -6,6 +6,7 @@ logging.basicConfig(level=logging.INFO)
 
 
 RAW_DATA_PATH = "data/raw/transactions.csv"
+PROCESSED_DATA_PATH = "data/processed/transactions_validated.csv"
 
 
 def load_data():
@@ -55,6 +56,11 @@ def validate_amount(data):
 
     logging.info("amount validation passed")
 
+def save_validated_data(data):
+    data.to_csv(PROCESSED_DATA_PATH, index=False)
+
+    logging.info(f"validated data saved at {PROCESSED_DATA_PATH}")
+
 
 def run_validation_pipeline():
     logging.info("data validation started")
@@ -64,6 +70,8 @@ def run_validation_pipeline():
     validate_required_columns(data)
     validate_missing_values(data)
     validate_amount(data)
+
+    save_validated_data(data)
 
     logging.info("data validation completed successfully")
 
