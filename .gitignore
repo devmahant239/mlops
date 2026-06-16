@@ -6,8 +6,11 @@ __pycache__/
 # environment
 .env
 
-# data files
-data/
+# ignore actual datasets
+data/**/*.csv
+
+# allow DVC metadata
+!data/**/*.dvc
 
 # logs
 *.log
